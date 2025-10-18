@@ -260,44 +260,177 @@
 			</div>
 			<!-- Sección de Menús Especiales eliminada por solicitud -->
 	
-	<!-- Inicio Información de contacto -->
-	<div class="contact-imfo-box">
+	<!-- Inicio Información de contacto (ampliada, sin referencias a Inicio) -->
+	<div class="contact-imfo-box" style="font-size:1.05rem; padding: 30px 0;">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-4">
-					<i class="fa fa-volume-control-phone"></i>
+			<div class="row text-center">
+				<div class="col-md-4 mb-3">
+					<i class="fa fa-volume-control-phone" style="font-size:28px;"></i>
 					<div class="overflow-hidden">
-						<h4>Teléfono</h4>
-						<p class="lead">
-							<a href="tel:967144456">96 714 4456</a>
+						<h4 style="font-size:1.25rem; margin-top:8px;">Teléfono</h4>
+						<p class="lead" style="font-size:1.1rem;">
+							<a href="tel:967144456" style="color:inherit; text-decoration:none;">96 714 4456</a>
 						</p>
-						<p class="small">Más detalles de contacto en la <a href="index.html#contacto">página Inicio</a>.</p>
 					</div>
 				</div>
-				<div class="col-md-4">
-					<i class="fa fa-envelope"></i>
+				<div class="col-md-4 mb-3">
+					<i class="fa fa-envelope" style="font-size:28px;"></i>
 					<div class="overflow-hidden">
-						<h4>Correo</h4>
-						<p class="lead">
-							<a href="mailto:helanieves.19@gmail.com">helanieves.19@gmail.com</a>
+						<h4 style="font-size:1.25rem; margin-top:8px;">Correo</h4>
+						<p class="lead" style="font-size:1.1rem;">
+							<a href="mailto:helanieves.19@gmail.com" style="color:inherit; text-decoration:none;">helanieves.19@gmail.com</a>
 						</p>
-						<p class="small">Consulta horarios y formularios en <a href="index.html#contacto">Inicio</a>.</p>
 					</div>
 				</div>
-				<div class="col-md-4">
-					<i class="fa fa-map-marker"></i>
+				<div class="col-md-4 mb-3">
+					<i class="fa fa-map-marker" style="font-size:28px;"></i>
 					<div class="overflow-hidden">
-						<h4>Ubicación</h4>
-						<p class="lead">
-							Pucara- Azuay - Ecuador
+						<h4 style="font-size:1.25rem; margin-top:8px;">Ubicación</h4>
+						<p class="lead" style="font-size:1.1rem; margin-bottom:0;">
+							Pucara - Azuay - Ecuador
 						</p>
-						<p class="small">Ver mapa y cómo llegar en <a href="index.html#ubicacion">Inicio</a>.</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- Fin Información de contacto -->
+	
+	<!-- Inicio Testimonios y Reseñas (carrusel interactivo + modal para enviar reseña) -->
+	<section class="testimonials-area" style="padding:40px 0; background:#f8f9fa;">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center mb-4">
+					<h2>Testimonios y Reseñas</h2>
+					<p>Lo que dicen nuestros clientes sobre Helanieves. Comparte tu experiencia.</p>
+				</div>
+			</div>
+
+			<div id="testimonialsCarousel" class="carousel slide" data-ride="carousel" data-interval="6000" aria-label="Carrusel de testimonios">
+				<ol class="carousel-indicators">
+					<li data-target="#testimonialsCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#testimonialsCarousel" data-slide-to="1"></li>
+					<li data-target="#testimonialsCarousel" data-slide-to="2"></li>
+				</ol>
+
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<div class="row justify-content-center">
+							<div class="col-md-8">
+								<div class="testimonial p-4 bg-white shadow-sm rounded text-center">
+									<p class="mb-3" style="font-size:1.05rem;">"Los helados de Helanieves son irresistibles: textura cremosa y sabores auténticos. El servicio siempre es amable."</p>
+									<div class="rating mb-2" aria-hidden="true">
+										<i class="fa fa-star text-warning"></i>
+										<i class="fa fa-star text-warning"></i>
+										<i class="fa fa-star text-warning"></i>
+										<i class="fa fa-star text-warning"></i>
+										<i class="fa fa-star text-warning"></i>
+									</div>
+									<h5 class="mb-0">María P. <small class="text-muted d-block">Cliente habitual</small></h5>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="row justify-content-center">
+							<div class="col-md-8">
+								<div class="testimonial p-4 bg-white shadow-sm rounded text-center">
+									<p class="mb-3" style="font-size:1.05rem;">"Probé el affogato y fue una combinación perfecta. Recomendado para los amantes del café y el buen helado."</p>
+									<div class="rating mb-2" aria-hidden="true">
+										<i class="fa fa-star text-warning"></i>
+										<i class="fa fa-star text-warning"></i>
+										<i class="fa fa-star text-warning"></i>
+										<i class="fa fa-star text-warning"></i>
+										<i class="fa fa-star-half-o text-warning"></i>
+									</div>
+									<h5 class="mb-0">Carlos G. <small class="text-muted d-block">Reseña reciente</small></h5>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="row justify-content-center">
+							<div class="col-md-8">
+								<div class="testimonial p-4 bg-white shadow-sm rounded text-center">
+									<p class="mb-3" style="font-size:1.05rem;">"Ambiente agradable y sabores creativos. Ideal para venir en familia."</p>
+									<div class="rating mb-2" aria-hidden="true">
+										<i class="fa fa-star text-warning"></i>
+										<i class="fa fa-star text-warning"></i>
+										<i class="fa fa-star text-warning"></i>
+										<i class="fa fa-star text-warning"></i>
+										<i class="fa fa-star text-warning"></i>
+									</div>
+									<h5 class="mb-0">Ana R. <small class="text-muted d-block">Visitante</small></h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<a class="carousel-control-prev" href="#testimonialsCarousel" role="button" data-slide="prev" aria-label="Anterior testimonio">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Anterior</span>
+				</a>
+				<a class="carousel-control-next" href="#testimonialsCarousel" role="button" data-slide="next" aria-label="Siguiente testimonio">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Siguiente</span>
+				</a>
+			</div>
+
+			<div class="row mt-4">
+				<div class="col text-center">
+					<!-- Botón que abre modal para dejar reseña -->
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#leaveReviewModal">
+						Dejar una reseña
+					</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Modal para enviar reseña (interactividad básica, solo HTML) -->
+	<div class="modal fade" id="leaveReviewModal" tabindex="-1" role="dialog" aria-labelledby="leaveReviewLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="leaveReviewLabel">Deja tu reseña sobre Helanieves</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<form>
+					<div class="modal-body">
+						<div class="form-group">
+							<label for="review-name">Nombre</label>
+							<input type="text" class="form-control" id="review-name" placeholder="Tu nombre">
+						</div>
+						<div class="form-group">
+							<label for="review-rating">Calificación</label>
+							<select id="review-rating" class="form-control">
+								<option value="5">5 - Excelente</option>
+								<option value="4">4 - Muy bueno</option>
+								<option value="3">3 - Bueno</option>
+								<option value="2">2 - Regular</option>
+								<option value="1">1 - Malo</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="review-text">Reseña</label>
+							<textarea id="review-text" class="form-control" rows="3" placeholder="Cuenta tu experiencia..."></textarea>
+						</div>
+						<p class="small text-muted mb-0">Esta es una forma interactiva para recolectar reseñas. El envío no añade contenido visible automáticamente sin procesamiento posterior.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+						<button type="submit" class="btn btn-primary">Enviar reseña</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- Fin Testimonios y Reseñas -->
 	
 	<!-- Inicio Pie de página -->
 	<footer class="footer-area bg-f">
@@ -317,7 +450,7 @@
 					<h3>Contacto</h3>
 					<p class="lead">Pucara- Azuay - Ecuador</p>
 					<p class="lead"><a href="tel:967144456">96 714 4456</a></p>
-					<p><a href="mailto:helanieves.19@gmail.com"> helanieves.19@gmail.com</a></p>
+					<p><a href="mailto:helanieves.19@gmail.com">helanieves.19@gmail.com</a></p>
 				</div>
 				<div class="col-lg-3 col-md-6">
 					<h3>Suscribirse</h3>
