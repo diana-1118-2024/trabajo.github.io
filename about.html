@@ -39,7 +39,23 @@
 				<div class="collapse navbar-collapse" id="navbars-rs-food">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-						<li class="nav-item"><a class="nav-link" href="about.html">Nuestra Historia</a></li>
+						<li class="nav-item"><a class="nav-link" href="menu.html">Menú</a></li>
+						<li class="nav-item active"><a class="nav-link" href="about.html">Nuestra historia</a></li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Pages</a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-a">
+								<a class="dropdown-item" href="reservation.html">Reservation</a>
+								<a class="dropdown-item" href="stuff.html">Stuff</a>
+								<a class="dropdown-item" href="gallery.html">Gallery</a>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="dropdown-b" data-toggle="dropdown">Blog</a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-b">
+								<a class="dropdown-item" href="blog.html">blog</a>
+								<a class="dropdown-item" href="blog-details.html">blog Single</a>
+							</div>
+						</li>
 						<li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
 					</ul>
 				</div>
@@ -60,7 +76,7 @@
 	</div>
 	<!-- End Page Title -->
 	
-	<!-- Start About -->
+	<!-- Start About (Misión y Visión) -->
 	<div class="about-section-box">
 		<div class="container">
 			<div class="row align-items-center">
@@ -77,66 +93,77 @@
 						<h3>Visión</h3>
 						<p>Ser reconocidos como la heladería líder en la región, innovando constantemente en sabores y servicios, y contribuyendo al bienestar de nuestra comunidad.</p>
 
-						<h4 class="mt-4">Nuestra Historia</h4>
-						<!-- Interactive accordion con la historia separada -->
-						<div id="historyAccordion" class="accordion">
-						  <div class="card">
-							<div class="card-header p-0" id="headingOne">
-							  <h5 class="mb-0">
-								<button class="btn btn-link btn-block text-left p-3" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-								  Inicios
-								</button>
-							  </h5>
-							</div>
-
-							<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#historyAccordion">
-							  <div class="card-body">
-								Helanieves nació de la pasión por los sabores auténticos y el deseo de compartir momentos dulces con la comunidad. Comenzamos como un pequeño proyecto familiar centrado en recetas artesanales.
-							  </div>
-							</div>
-						  </div>
-
-						  <div class="card">
-							<div class="card-header p-0" id="headingTwo">
-							  <h5 class="mb-0">
-								<button class="btn btn-link btn-block text-left collapsed p-3" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-								  Crecimiento y sabores
-								</button>
-							  </h5>
-							</div>
-							<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#historyAccordion">
-							  <div class="card-body">
-								Con esfuerzo y dedicación fuimos añadiendo nuevos sabores y mejorando procesos, siempre con ingredientes naturales. Nuestra propuesta se basó en calidad y creatividad local.
-							  </div>
-							</div>
-						  </div>
-
-						  <div class="card">
-							<div class="card-header p-0" id="headingThree">
-							  <h5 class="mb-0">
-								<button class="btn btn-link btn-block text-left collapsed p-3" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-								  Compromiso actual
-								</button>
-							  </h5>
-							</div>
-							<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#historyAccordion">
-							  <div class="card-body">
-								Hoy mantenemos el compromiso de ofrecer productos frescos y una atención cálida. Cada visita a Helanieves es una oportunidad para disfrutar y compartir.
-							  </div>
-							</div>
-						  </div>
-						</div>
-
-						<a class="btn btn-lg btn-circle btn-outline-new-white mt-3" href="#">Reservación</a>
+						<a class="btn btn-lg btn-circle btn-outline-new-white mt-3" href="reservation.html">Reservación</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- End About -->
-	
-	<!-- (Menú eliminado según solicitud) -->
-	
+
+	<!-- Start History (sección separada) -->
+	<div class="history-section-box">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-10">
+					<h2 class="text-center mb-4">Nuestra Historia</h2>
+
+					<!-- Interactive accordion con la historia separada -->
+					<div id="historyAccordion" class="accordion">
+					  <div class="card">
+						<div class="card-header p-0" id="headingOne">
+						  <h5 class="mb-0">
+							<button class="btn btn-link btn-block text-left p-3" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+							  Inicios
+							</button>
+						  </h5>
+						</div>
+
+						<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#historyAccordion">
+						  <div class="card-body">
+							Helanieves nació de la pasión por los sabores auténticos y el deseo de compartir momentos dulces con la comunidad. Comenzamos como un pequeño proyecto familiar centrado en recetas artesanales.
+						  </div>
+						</div>
+					  </div>
+
+					  <div class="card">
+						<div class="card-header p-0" id="headingTwo">
+						  <h5 class="mb-0">
+							<button class="btn btn-link btn-block text-left collapsed p-3" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							  Crecimiento y sabores
+							</button>
+						  </h5>
+						</div>
+						<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#historyAccordion">
+						  <div class="card-body">
+							Con esfuerzo y dedicación fuimos añadiendo nuevos sabores y mejorando procesos, siempre con ingredientes naturales. Nuestra propuesta se basó en calidad y creatividad local.
+						  </div>
+						</div>
+					  </div>
+
+					  <div class="card">
+						<div class="card-header p-0" id="headingThree">
+						  <h5 class="mb-0">
+							<button class="btn btn-link btn-block text-left collapsed p-3" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+							  Compromiso actual
+							</button>
+						  </h5>
+						</div>
+						<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#historyAccordion">
+						  <div class="card-body">
+							Hoy mantenemos el compromiso de ofrecer productos frescos y una atención cálida. Cada visita a Helanieves es una oportunidad para disfrutar y compartir.
+						  </div>
+						</div>
+					  </div>
+					</div>
+					<!-- /accordion -->
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End History -->
+
 	<!-- Start Contact info -->
 	<div class="contact-imfo-box">
 		<div class="container">
@@ -157,7 +184,7 @@
 				</div>
 				<div class="col-md-4">
 					<i class="fa fa-map-marker"></i>
-					<div class="overflow-hidden">
+					<div class="overflow-hidden"></div>
 						<h4>Ubicación</h4>
 						<p class="lead">Pucará, Azuay, Ecuador</p>
 					</div>
