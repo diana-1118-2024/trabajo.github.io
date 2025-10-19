@@ -101,67 +101,149 @@
 	</div>
 	<!-- End About -->
 
-	<!-- Start History (sección separada) -->
+	<!-- Start History (sección interactiva y más diseñada) -->
+	<style>
+	/* Scoped styles para la sección de historia */
+	.history-section-box { padding: 60px 0; background: linear-gradient(180deg,#fff,#f8fbff); }
+	.history-header { margin-bottom: 30px; }
+	.history-progress { height: 6px; background: #e9eef6; border-radius: 6px; overflow: hidden; margin: 20px 0 30px; box-shadow: inset 0 1px 2px rgba(0,0,0,0.03); }
+	.history-progress-bar { height: 100%; width: 0%; background: linear-gradient(90deg,#ffb347,#ffcc33); transition: width 450ms ease; }
+
+	.history-timeline .card { border: none; margin-bottom: 14px; background: #fff; box-shadow: 0 6px 18px rgba(18,38,63,0.06); border-radius: 8px; overflow: hidden; }
+	.history-timeline .card-header { background: transparent; padding: 0; }
+	.history-step-btn { display: flex; align-items: center; width:100%; padding: 18px 20px; text-decoration: none; color: #213047; font-weight: 600; background: transparent; border: none; }
+	.history-step-btn .icon { width:44px; height:44px; border-radius:10px; display:inline-flex; align-items:center; justify-content:center; margin-right:14px; background:#fff; box-shadow: 0 6px 16px rgba(33,48,71,0.06); font-size:18px; color:#ff7a00; }
+	.history-step-btn .title { flex:1; text-align:left; font-size:1rem; }
+	.history-step-btn .chev { margin-left:12px; color:#9aa9bf; transition: transform 240ms ease; }
+
+	.history-timeline .collapse { background: linear-gradient(180deg,#ffffff,#fcfdff); padding: 18px 20px 22px; color:#556777; font-size:0.98rem; line-height:1.6; border-top:1px solid rgba(15,45,80,0.04); }
+
+	.history-timeline .card.active .history-step-btn { background: linear-gradient(90deg, rgba(255,186,71,0.06), rgba(255,204,51,0.04)); }
+	.history-timeline .card.active .chev { transform: rotate(180deg); color:#ff8a00; }
+
+	/* Responsive tweaks */
+	@media (max-width:767px){ .history-step-btn { padding: 14px 12px; } .history-step-btn .title { font-size:0.95rem; } }
+	</style>
+
 	<div class="history-section-box">
 		<div class="container">
+			<div class="row justify-content-center history-header">
+				<div class="col-lg-10 text-center"></div>
+					<h2 class="mb-2">Nuestra Historia</h2>
+					<p class="text-muted mb-0">Un recorrido interactivo por los hitos que nos han definido. Haz clic en cada paso para leer más.</p>
+
+					<div class="history-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+						<div class="history-progress-bar"></div>
+					</div>
+				</div>
+			</div>
+
 			<div class="row justify-content-center">
 				<div class="col-lg-10">
-					<h2 class="text-center mb-4">Nuestra Historia</h2>
+					<div id="historyAccordion" class="accordion history-timeline" role="tablist" aria-multiselectable="false">
 
-					<!-- Interactive accordion con la historia separada -->
-					<div id="historyAccordion" class="accordion">
-					  <div class="card">
-						<div class="card-header p-0" id="headingOne">
-						  <h5 class="mb-0">
-							<button class="btn btn-link btn-block text-left p-3" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-							  Inicios
-							</button>
-						  </h5>
+						<div class="card" data-step="1">
+							<div class="card-header" id="headingOne">
+								<h5 class="mb-0">
+									<button class="history-step-btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+										<span class="icon"><i class="fa fa-seedling" aria-hidden="true"></i></span>
+										<span class="title">Inicios</span>
+										<span class="chev"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+									</button>
+								</h5>
+							</div>
+
+							<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#historyAccordion">
+								<div class="card-body">
+									Helanieves nació de la pasión por los sabores auténticos y el deseo de compartir momentos dulces con la comunidad. Comenzamos como un pequeño proyecto familiar centrado en recetas artesanales, experimentando y perfeccionando texturas y combinaciones.
+								</div>
+							</div>
 						</div>
 
-						<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#historyAccordion">
-						  <div class="card-body">
-							Helanieves nació de la pasión por los sabores auténticos y el deseo de compartir momentos dulces con la comunidad. Comenzamos como un pequeño proyecto familiar centrado en recetas artesanales.
-						  </div>
+						<div class="card" data-step="2">
+							<div class="card-header" id="headingTwo">
+								<h5 class="mb-0">
+									<button class="history-step-btn collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+										<span class="icon"><i class="fa fa-ice-cream" aria-hidden="true"></i></span>
+										<span class="title">Crecimiento y sabores</span>
+										<span class="chev"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+									</button>
+								</h5>
+							</div>
+							<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#historyAccordion">
+								<div class="card-body">
+									Con esfuerzo fuimos añadiendo nuevos sabores y mejorando procesos, siempre priorizando ingredientes naturales. Nuestra carta fue creciendo incorporando propuestas locales e innovadoras que encantaron a la comunidad.
+								</div>
+							</div>
 						</div>
-					  </div>
 
-					  <div class="card">
-						<div class="card-header p-0" id="headingTwo">
-						  <h5 class="mb-0">
-							<button class="btn btn-link btn-block text-left collapsed p-3" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-							  Crecimiento y sabores
-							</button>
-						  </h5>
+						<div class="card" data-step="3">
+							<div class="card-header" id="headingThree">
+								<h5 class="mb-0">
+									<button class="history-step-btn collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+										<span class="icon"><i class="fa fa-handshake-o" aria-hidden="true"></i></span>
+										<span class="title">Compromiso actual</span>
+										<span class="chev"><i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+									</button>
+								</h5>
+							</div>
+							<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#historyAccordion">
+								<div class="card-body">
+									Hoy mantenemos el compromiso de ofrecer productos frescos y una atención cálida. Cada visita a Helanieves es una oportunidad para disfrutar y compartir; seguimos innovando y escuchando a nuestra clientela.
+								</div>
+							</div>
 						</div>
-						<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#historyAccordion">
-						  <div class="card-body">
-							Con esfuerzo y dedicación fuimos añadiendo nuevos sabores y mejorando procesos, siempre con ingredientes naturales. Nuestra propuesta se basó en calidad y creatividad local.
-						  </div>
-						</div>
-					  </div>
 
-					  <div class="card">
-						<div class="card-header p-0" id="headingThree">
-						  <h5 class="mb-0">
-							<button class="btn btn-link btn-block text-left collapsed p-3" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-							  Compromiso actual
-							</button>
-						  </h5>
-						</div>
-						<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#historyAccordion">
-						  <div class="card-body">
-							Hoy mantenemos el compromiso de ofrecer productos frescos y una atención cálida. Cada visita a Helanieves es una oportunidad para disfrutar y compartir.
-						  </div>
-						</div>
-					  </div>
-					</div>
-					<!-- /accordion -->
-
+					</div> <!-- /.accordion -->
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<script>
+	/* Interactividad: actualiza la barra de progreso y clases de estado al abrir/cerrar */
+	(function($){
+		$(function(){
+			var $accordion = $('#historyAccordion');
+			var $cards = $accordion.find('.card');
+			var total = $cards.length;
+			var $progress = $('.history-progress-bar');
+
+			function setActiveCard($card){
+				$cards.removeClass('active');
+				$card.addClass('active');
+				var idx = $cards.index($card) + 1;
+				var pct = Math.round((idx / total) * 100);
+				$progress.css('width', pct + '%').attr('aria-valuenow', pct);
+			}
+
+			// Inicializar con la card que está expandida por defecto
+			var $initial = $cards.filter(function(){ return $(this).find('.collapse').hasClass('show'); }).first();
+			if($initial.length) setActiveCard($initial);
+			else setActiveCard($cards.first());
+
+			// Eventos de Bootstrap collapse
+			$accordion.on('shown.bs.collapse', function(e){
+				var $card = $(e.target).closest('.card');
+				setActiveCard($card);
+				// desplazamiento suave opcional para centrar el paso abierto en pantallas pequeñas
+				if ($(window).width() < 768) {
+					$('html, body').animate({ scrollTop: $card.offset().top - 80 }, 350);
+				}
+			});
+
+			// Permite cerrar una sección y abrir otra (comportamiento por defecto gracias a data-parent)
+			// Añadimos clic para que el botón de paso también funcione como toggle visual rápido
+			$cards.find('.history-step-btn').on('click', function(){
+				var $card = $(this).closest('.card');
+				// si se hace clic en el ya activo, dejar que bootstrap cierre/abra; la clase se actualiza en shown.bs.collapse
+				// añadimos una clase visual inmediata
+				$cards.removeClass('active-temp');
+				$card.addClass('active-temp');
+			});
+		});
+	})(jQuery);
+	</script>
 	<!-- End History -->
 
 	<!-- Start Contact info -->
