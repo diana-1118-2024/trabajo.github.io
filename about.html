@@ -117,37 +117,58 @@
 						<h2>Nuestra Historia</h2>
 						<p class="text-muted">Un recorrido conciso y ordenado por los hitos que nos han definido. Presentado en cuadros y viñetas para una lectura más clara y atractiva.</p>
 
-						<!-- Cuadros (cards) para cada sección -->
+						<!-- Cuadros (cards) para cada sección con imagen a la izquierda -->
 						<div class="card mb-3">
 							<div class="card-body">
-								<h4 class="card-title"><i class="fa fa-seedling mr-2" aria-hidden="true"></i>Inicios</h4>
-								<ul class="mb-0 pl-3">
-									<li>Proyecto familiar enfocado en recetas artesanales.</li>
-									<li>Perfeccionamiento de texturas y combinaciones.</li>
-									<li>Primera apertura local con producción propia.</li>
-								</ul>
+								<div class="row align-items-center">
+									<div class="col-3 col-sm-2 text-center"></div>
+										<img src="images/gallery-img-01.jpg" alt="Inicios" class="img-fluid rounded">
+									</div>
+									<div class="col-9 col-sm-10">
+										<h4 class="card-title"><i class="fa fa-seedling mr-2" aria-hidden="true"></i>Inicios</h4>
+										<ul class="mb-0 pl-3">
+											<li>Proyecto familiar enfocado en recetas artesanales.</li>
+											<li>Perfeccionamiento de texturas y combinaciones.</li>
+											<li>Primera apertura local con producción propia.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="card mb-3"></div>
+							<div class="card-body">
+								<div class="row align-items-center">
+									<div class="col-3 col-sm-2 text-center">
+										<img src="images/gallery-img-01.jpg" alt="Crecimiento y sabores" class="img-fluid rounded">
+									</div>
+									<div class="col-9 col-sm-10">
+										<h4 class="card-title"><i class="fa fa-chart-line mr-2" aria-hidden="true"></i>Crecimiento y sabores</h4>
+										<ul class="mb-0 pl-3">
+											<li>Ampliación de la carta conservando ingredientes naturales.</li>
+											<li>Introducción de sabores locales e innovadores.</li>
+											<li>Retroalimentación constante de la comunidad.</li>
+										</ul>
+									</div>
+								</div>
 							</div>
 						</div>
 
 						<div class="card mb-3">
 							<div class="card-body">
-								<h4 class="card-title"><i class="fa fa-chart-line mr-2" aria-hidden="true"></i>Crecimiento y sabores</h4>
-								<ul class="mb-0 pl-3">
-									<li>Ampliación de la carta conservando ingredientes naturales.</li>
-									<li>Introducción de sabores locales e innovadores.</li>
-									<li>Retroalimentación constante de la comunidad.</li>
-								</ul>
-							</div>
-						</div>
-
-						<div class="card mb-3">
-							<div class="card-body">
-								<h4 class="card-title"><i class="fa fa-hand-holding-heart mr-2" aria-hidden="true"></i>Compromiso actual</h4>
-								<ul class="mb-0 pl-3">
-									<li>Calidad constante en productos y atención.</li>
-									<li>Innovación continua escuchando a nuestros clientes.</li>
-									<li>Contribución al bienestar de la comunidad local.</li>
-								</ul>
+								<div class="row align-items-center">
+									<div class="col-3 col-sm-2 text-center">
+										<img src="images/gallery-img-01.jpg" alt="Compromiso actual" class="img-fluid rounded">
+									</div>
+									<div class="col-9 col-sm-10">
+										<h4 class="card-title"><i class="fa fa-hand-holding-heart mr-2" aria-hidden="true"></i>Compromiso actual</h4>
+										<ul class="mb-0 pl-3">
+											<li>Calidad constante en productos y atención.</li>
+											<li>Innovación continua escuchando a nuestros clientes.</li>
+											<li>Contribución al bienestar de la comunidad local.</li>
+										</ul>
+									</div>
+								</div>
 							</div>
 						</div>
 
@@ -158,6 +179,14 @@
 		</div>
 	</div>
 	<!-- End History -->
+
+<script>
+/* Elimina la imagen pequeña que estaba al inicio de la historia */
+document.querySelectorAll('img[src="images/blog-img-09.jpg"]').forEach(function(img){
+	var col = img.closest('.col-lg-4, .col-md-5, .col-4');
+	if(col) col.remove();
+});
+</script>
 
 	<!-- Start Contact info -->
 	<div class="contact-imfo-box">
